@@ -11,7 +11,7 @@ let height = parseInt(d3.select("#svg-container").style("height"));
 const margin = { top: 6, right: 30, bottom: 60, left: 50 };
 
 // parsing & formatting
-const parseTime = d3.timeParse("%Y-%m-%d");
+// const parseTime = d3.timeParse("%Y-%m-%d");
 const formatTime = d3.timeFormat("%Y-%m-%d");
 const formatXAxis = d3.timeFormat("%b %Y");
 const formatDate = d3.timeFormat("%b %d, %Y");
@@ -19,11 +19,8 @@ const formatPrice = d3.format(",.2f"); // thousand + 2 decimal point
 
 // for API
 const date = new Date();
-const start = `${date.getFullYear() - 1}-${date.getMonth() + 1}-${
-  date.getDate() + 2
-}`;
-const end = formatTime(date);
-const url = `https://api.coinpaprika.com/v1/tickers/btc-bitcoin/historical?start=${start}&end=${end}&interval=1d`;
+const start = formatTime(d3.timeDay.offset(date, -365 + 1));
+const url = `https://api.coinpaprika.com/v1/tickers/btc-bitcoin/historical?start=${start}&interval=1d`;
 
 // scale
 const xScale = d3.scaleUtc().range([margin.left, width - margin.right]);
