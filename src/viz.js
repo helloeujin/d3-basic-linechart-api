@@ -11,7 +11,6 @@ let height = parseInt(d3.select("#svg-container").style("height"));
 const margin = { top: 6, right: 30, bottom: 60, left: 50 };
 
 // parsing & formatting
-// const parseTime = d3.timeParse("%Y-%m-%d");
 const formatTime = d3.timeFormat("%Y-%m-%d");
 const formatXAxis = d3.timeFormat("%b %Y");
 const formatDate = d3.timeFormat("%b %d, %Y");

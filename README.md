@@ -31,13 +31,13 @@ D3.js는 웹상에서 데이터 시각화를 가능하게 하는 자바스크립
 
 [Vite](https://ko.vitejs.dev/)라는 프론트엔드 번들도구를 사용하였습니다. D3.js 라이브러리와 바닐라 자바스크립트(Vanilla Js)를 이용하였습니다.
 
-(Visual Studio Code)[https://code.visualstudio.com/]라는 코드 에디터를 사용합니다.
+[Visual Studio Code](https://code.visualstudio.com/)라는 코드 에디터를 사용합니다.
 
 <br>
 
 ## 시작하기
 
-템플렛 다운로드 후,
+`Download Zip`을 클릭하여, 템플릿을 다운받고 압축을 풉니다.
 
-- `npm install`
-- `npm run dev`
+- `npm install`: 라이브러리와 도구들을 설치
+- `npm run dev`: 서버 실행
