@@ -31,7 +31,7 @@ D3.js는 웹상에서 데이터 시각화를 가능하게 하는 자바스크립
 
 [Vite](https://ko.vitejs.dev/)라는 프론트엔드 번들도구를 사용하였습니다. D3.js 라이브러리와 바닐라 자바스크립트(Vanilla Js)를 이용하였습니다.
 
-[Visual Studio Code](https://code.visualstudio.com/)라는 코드 에디터를 사용합니다.
+[Visual Studio Code](https://code.visualstudio.com/)라는 코드 에디터를 사용합니다. 템플렛을 실행하기 위해서 명령어를 터미널에 입력합니다.
 
 <br>
 
