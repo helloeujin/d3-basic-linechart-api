@@ -22,7 +22,7 @@ const start = formatTime(d3.timeDay.offset(date, -365 + 1));
 const url = `https://api.coinpaprika.com/v1/tickers/btc-bitcoin/historical?start=${start}&interval=1d`;
 
 // scale
-const xScale = d3.scaleUtc().range([margin.left, width - margin.right]);
+const xScale = d3.scaleTime().range([margin.left, width - margin.right]);
 const yScale = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 // axis

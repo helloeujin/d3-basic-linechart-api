@@ -8,7 +8,6 @@ const svg = d3.select("#svg-container").append("svg").attr("id", "svg");
 
 let width = parseInt(d3.select("#svg-container").style("width"));
 let height = parseInt(d3.select("#svg-container").style("height"));
-const margin = { top: 6, right: 30, bottom: 60, left: 50 };
 
 // parsing & formatting
 const formatTime = d3.timeFormat("%Y-%m-%d");
@@ -18,10 +17,11 @@ const formatPrice = d3.format(",.2f"); // thousand + 2 decimal point
 
 // for API
 const date = new Date();
-const start = formatTime(d3.timeDay.offset(date, -365 + 1));
+const start = formatTime(d3.timeDay.offset(date, -365 + 2));
 const url = `https://api.coinpaprika.com/v1/tickers/btc-bitcoin/historical?start=${start}&interval=1d`;
 
 // scale
+const margin = { top: 6, right: 30, bottom: 60, left: 50 };
 const xScale = d3.scaleUtc().range([margin.left, width - margin.right]);
 const yScale = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
